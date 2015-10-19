@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    #SITE-SEARCH
+\*------------------------------------*/
+
+/**
+ * Styling for the Alpha series site search.
+ */
+
+$sagovau-site-search-height: 2 * $sagovau-spacing-unit-base !default;
+$sagovau-site-search-breakpoint: "large-and-up" !default;
+
+
+
+
+
+/**
+ * 1. Relatively position the search field so it's below the menu on small 
+ *    screens.
+ *
+ * 2. Absolutely position on large screens.
+ **/
+ 
+ /*form*/.#{$sagovau-namespace}site-search {
+    background-color: $sagovau-color-brand--light;
+    display: inline-block;
+    padding: $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small 0 $sagovau-spacing-unit-base--small;
+    position: relative;
+    
+    @include media-query($sagovau-primary-navigation-breakpoint) {
+        background-image: none;
+        border-bottom-left-radius: $sagovau-spacing-unit-base;
+        border-color: $sagovau-color-brand;
+        border-style: solid;
+        border-width: 0 0 3px 3px;
+        box-shadow: none;
+        display: none;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        
+        &.is-active {
+            display: inline-block;
+        }
+        
+    }
+    
+    @include media-query(huge) {
+        border-width: 0;
+        display: inline-block;
+        top: 0;
+    }
+    
+}
+    
+    
+    /*input*/.#{$sagovau-namespace}site-search__input {
+        background-color: transparent;
+        border: none;
+        display: inline-block;
+        height: $sagovau-primary-navigation-height;
+        padding: 0;
+        vertical-align: middle;
+    }
+    
+    /*input[type=text]*/.#{$sagovau-namespace}site-search__input--text {
+        background-color: white;
+        border-radius: 3px;
+        display: inline-block;
+        padding-left: $sagovau-spacing-unit-base--small;
+        padding-right: $sagovau-site-search-height;    // Ensure any input cancel button added by browser doesn't overlap with submit button
+        width: 100%;
+        
+        @include media-query($sagovau-site-search-breakpoint) {
+            border-radius: 0;
+            background-color: transparent;
+            padding-left: $sagovau-spacing-unit-base;
+        }
+        
+        @include media-query(huge) {
+            display: inline-block;   /* [2] */
+        }
+        
+        &::placeholder {
+            color: $sagovau-color-brand;
+            font-style: italic;
+        }
+        
+    }
+
+    /*input[type=text]*/.#{$sagovau-namespace}site-search__input--error {
+        
+        &::placeholder {
+            color: $sagovau-color-danger;
+            font-weight: bold;
+        }
+        
+    }
+    
+    
+    /*input[type=text]*/.#{$sagovau-namespace}site-search__input--submit {
+        fill: $sagovau-color-brand;
+        position: absolute;
+        right: $sagovau-spacing-unit-base--small;
+        
+        @include media-query($sagovau-site-search-breakpoint) {
+            right: 0;
+        }
+    
+    }

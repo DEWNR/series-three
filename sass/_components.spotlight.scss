@@ -1,0 +1,144 @@
+/*------------------------------------*\
+    #SPOTLIGHT
+\*------------------------------------*/
+
+/**
+ * Styling for the Alpha series spotlight.
+ **/
+
+$sagovau-spotlight-font-size-title: 32px !default;
+$sagovau-spotlight-font-size-base: 18px !default;
+$sagovau-spotlight-image-height: 280px !default;  // The height of the background image
+$sagovau-spotlight-image-left-offset: 0 !default;     // The left-hand side offset of huge screens
+$sagovau-spotlight-gradient: true !default;
+$sagovau-spotlight-gradient-height: $sagovau-spacing-unit-base !default; // The height of the gradient that covers the bottom of the background image on small screens
+$sagovau-spotlight-overlay-width: 380px !default; // The width of the overlay that covers the right of the background image on large screens
+$sagovau-spotlight-overlay-padding-right: 50px !default; // The padding on the right-hand side of the aforementioned overlay
+
+
+
+/*a*/.#{$sagovau-namespace}spotlight {
+    background-color: $sagovau-color-background-content;
+    display: block;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    
+    @include media-query(large-and-up) {
+        padding: 0;
+    }
+    
+    &:hover, &:focus {
+        text-decoration: underline;
+    }
+    
+}
+    
+    /**
+     * A absolutely positioned container to make sure the image is sized correctly
+     **/
+
+    /*div*/.#{$sagovau-namespace}spotlight__background {
+        
+        @include media-query(huge) {
+            bottom: 0;
+            left: $sagovau-spotlight-image-left-offset;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        
+    }
+
+        /*img*/.#{$sagovau-namespace}spotlight__image {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 0;
+            max-width: auto;
+            margin: 0;
+            padding-bottom: $sagovau-spotlight-image-height/480px * 100%;   // Scale to reach max at 480px breakpoint
+            position: relative;
+            width: 100%;
+            
+            
+            // Add a negative bottom margin if using a gradient
+            
+            @if $sagovau-spotlight-gradient {
+                margin-bottom: -$sagovau-spotlight-gradient-height;
+            }
+
+            @include media-query(small-and-up) {
+                padding-bottom: $sagovau-spotlight-image-height/720px * 100%;   // Scale to reach max at 720px breakpoint
+            }
+
+            @include media-query(large-and-up) {
+                padding-bottom: $sagovau-spotlight-image-height;
+            }
+
+            @include media-query(huge) {
+                margin-bottom: 0;
+                position: absolute;
+            }
+
+        }
+
+        /*div*/.#{$sagovau-namespace}spotlight__image--left {
+            background-position: left;
+        }
+        
+        /*div*/.#{$sagovau-namespace}spotlight__image--25\% {
+            background-position: 25%;
+        }
+        
+        /*div*/.#{$sagovau-namespace}spotlight__image--75\% {
+            background-position: 75%;
+        }
+
+        /*div*/.#{$sagovau-namespace}spotlight__image--right {
+            background-position: right;
+        }
+
+
+    /*div*/.#{$sagovau-namespace}spotlight__text {
+        @include inuit-font-size($sagovau-spotlight-font-size-base);
+        
+        @if $sagovau-spotlight-gradient {
+                background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,1) $sagovau-spotlight-gradient-height);
+        }
+        
+        padding: $sagovau-spacing-unit-base $sagovau-spacing-unit-base--small;
+        padding-bottom: $sagovau-spacing-unit-base--small;
+        position: relative;
+        
+        @include media-query(large-and-up) {
+            padding-right: 150px;  // Ensure that the spotlight text doesn't conflict with the slider controls
+        }
+        
+        @include media-query(huge) {
+            background: url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-spotlight-overlay.svg);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            display: table-cell;
+            height: $sagovau-spotlight-image-height;
+            padding: 0 $sagovau-spotlight-overlay-padding-right $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
+            vertical-align: middle;
+            width: $sagovau-spotlight-overlay-width;
+        }
+        
+        & > :last-child {
+            margin-bottom: 0;
+        }
+        
+    }
+        
+        /*h2*/.#{$sagovau-namespace}spotlight__title {
+            @include inuit-font-size($sagovau-spotlight-font-size-title);
+            
+            /*a*/.#{$sagovau-namespace}spotlight:hover &, /*a*/.#{$sagovau-namespace}spotlight:focus & {
+                text-decoration: underline;
+            }
+
+        }

@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #IMAGE-GALLERY
+\*------------------------------------*/
+
+/**
+ * Styling for the Alpha series in-page image gallery.
+ **/
+
+
+/*div*/.#{$sagovau-namespace}image-gallery { }
+
+    /*figure*/.#{$sagovau-namespace}image-gallery__item {
+        text-align: center;
+    }
+
+        /*img*/.#{$sagovau-namespace}image-gallery__image {
+            margin-bottom: $sagovau-spacing-unit-base--small;
+        }
+
+        /*figcaption*/.#{$sagovau-namespace}image-gallery__caption {
+            margin-bottom: $sagovau-spacing-unit-base;
+        }

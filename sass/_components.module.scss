@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #MODULE
+\*------------------------------------*/
+
+/**
+ * Shared (extend-only) styling for the Alpha series modules (eg feature module,
+ * icon module, etc.)
+ *
+ * Because this module is required by several other components, but must be 
+ * included in the code before they are: *
+ * 1. Set a default flag to show that this hasn't already been loaded
+ * 
+ * 2. Only add the classes if they haven't already been added
+ *
+ * 3. Set a flag to show that the contents have been loaded
+ **/
+ 
+$sagovau-module-loaded: false !default; /* [1] */
+
+@if $sagovau-module-loaded != true {    /* [2] */
+
+    /*a*/%#{$sagovau-namespace}module {
+        border-color: $sagovau-color-brand--medium-light;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        display: block;
+        margin-bottom: 0;
+        position: relative;
+        @include ui-link;       // Underline on hover/focus
+        
+        @include media-query(large-and-up) {
+            border-width: 0;
+        }
+        
+    }
+
+        
+        /*h2, h3*/%#{$sagovau-namespace}module__title {
+            @extend %#{$sagovau-namespace}gamma;
+            margin-bottom: 0;
+            padding: $sagovau-spacing-unit-base 0;
+            text-decoration: inherit;    // Make sure heading is underlined on hover/focus
+        }
+    
+    
+    // Mark the module as loaded
+
+    $sagovau-module-loaded: true;   /* [3] */
+    
+}

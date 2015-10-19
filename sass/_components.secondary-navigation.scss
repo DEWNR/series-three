@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #SECONDARY-NAVIGATION
+\*------------------------------------*/
+
+/**
+ * Styling for the Alpha series sites' secondary (side) navigation menus.
+ **/
+
+/*nav*/.#{$sagovau-namespace}secondary-navigation {
+    padding-top: $sagovau-spacing-unit-base--small;
+}
+
+    /*ul*/.#{$sagovau-namespace}secondary-navigation__list {
+        @extend %#{$inuit-namespace}list-bare;
+        margin-left: $sagovau-spacing-unit-base;
+    }
+        
+        /*li*/.#{$sagovau-namespace}secondary-navigation__item {
+            font-weight: normal;
+            
+            &::before {
+                background-image: url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-circle-arrow.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+                display: inline-block;
+                height: $sagovau-font-size-base;
+                margin-left: -$sagovau-spacing-unit-base;
+                margin-right: $sagovau-spacing-unit-base - $sagovau-font-size-base;
+                vertical-align: middle;
+                width: $sagovau-font-size-base;
+            }
+            
+            &.is-active.is-parent::before {
+                transform: rotate(90deg);
+            }
+            
+        }
+
+        /*li*/.#{$sagovau-namespace}secondary-navigation__item--level-1 {
+            font-weight: bold;
+        }
+
+            /*a*/.#{$sagovau-namespace}secondary-navigation__link.is-self {
+                color: $sagovau-color-text-base;
+                pointer-events: none;
+                text-decoration: none;
+            }
+    
