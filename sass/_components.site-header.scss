@@ -11,7 +11,10 @@
  * Custom site-header content can be set by defining a mixin called
  * sagovau-site-header-custom-content
  **/
- 
+
+$sagovau-site-header-logo-height: 100px !default;
+
+
 /*header*/.#{$sagovau-namespace}site-header {
     position: relative;
     z-index: 2;  // Make sure any dropdowns (etc) from the header are positioned in front of the main content
@@ -43,6 +46,7 @@
          **/
         
         /*h1*/.#{$sagovau-namespace}site-header__logo {
+            height: $sagovau-site-header-logo-height;
             margin-bottom: 0;
             
             // Include custom content
