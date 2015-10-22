@@ -116,7 +116,7 @@ cookieManager.erase = function (name) {
 
 
 
-/* Remove Modernizr-style "no-inlinesvg" class before Modernizr runs, and replace the "no-retina" with "retina" if required. (These are included by default to prevent different versions of the same image from being displayed if JavaScript is disabled.) */
+/* Remove no-js class */
 
 (function () {
 
@@ -124,23 +124,7 @@ cookieManager.erase = function (name) {
     
     var classedElement = document.documentElement;
     
-    classedElement.className = classedElement.className.replace(/(?:^|\s)no-inlinesvg(?!\S)/, '');
-
-    if (window.devicePixelRatio > 1) {
-
-        classedElement.className = classedElement.className.replace(/(?:^|\s)no-retina(?!\S)/, '');
-
-        classedElement.className += " retina";
-
-    }
+    classedElement.className = classedElement.className.replace(/(?:^|\s)no-js(?!\S)/, '');
 
 }());
-
-
-
-
-
-// @codekit-append ../../includes/modernizr/modernizr.custom.45448.js;
-
-
 

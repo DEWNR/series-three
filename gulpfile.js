@@ -54,12 +54,12 @@ jsList = [
     {
         source: [
             paths.src.js + "s3-prepare.js",
-            paths.src.js + "modernizr.custom.45448.js"
         ],
         filename: "s3-prepare.js"
     },
     {
         source: [
+            paths.src.js + "modernizr.custom.45448.js",
             paths.src.js + "s3-enhance.js"
         ],
         filename: "s3-enhance.js"
