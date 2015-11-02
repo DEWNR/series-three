@@ -11,13 +11,13 @@
  * and three items revealed on hover/focus.
  **/
 
-$sagovau-primary-navigation-height: 2 * $sagovau-spacing-unit-base !default;    
+$sagovau-primary-navigation-height: 2 * $sagovau-spacing-unit-base !default;
 $sagovau-primary-navigation-breakpoint: "large-and-up" !default;
 $sagovau-primary-navigation-dropdown-width: 420px !default;
 
 
 /**
- * 1. Hide the legacy menu by default, as on smaller devices its visibility 
+ * 1. Hide the legacy menu by default, as on smaller devices its visibility
  *    will be toggled by the user
  *
  * 2. Provide a variant class to toggle visibility
@@ -30,30 +30,30 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
 /*nav*/.#{$sagovau-namespace}primary-navigation {
     display: none;   /* [1] */
     height: 0;
-   
+
     &.is-active {
         display: block;  /* [2] */
     }
-    
+
     @include media-query($sagovau-primary-navigation-breakpoint) {
         display: block;  /* [3] */
         height: $sagovau-primary-navigation-height
     }
-    
+
     .no-js & {
         display: block;  /* [4] */
         height: auto;
-        
+
         @include media-query($sagovau-primary-navigation-breakpoint) {
             width: auto;
             height: $sagovau-primary-navigation-height;
         }
-        
+
     }
-    
+
 }
-    
-    
+
+
     /*nav*/.#{$sagovau-namespace}primary-navigation__search {
         @include media-query($sagovau-primary-navigation-breakpoint) {
             position: absolute;
@@ -62,21 +62,21 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
             width: 100%;
         }
     }
-    
-    
+
+
     /**
      * Note that that we are unable to customise the code produced by the CMS,
      * so we're stuck using IDs and nested styling. Ordinarily, this would be
      * avoided in favour of BEM-like class names.
      **/
-     
+
     /*nav*/.#{$sagovau-namespace}primary-navigation__legacy-menu {
         box-shadow: 0 $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small rgba(0,0,0,0.3);
-        
+
         @include media-query($sagovau-primary-navigation-breakpoint) {
             box-shadow: none;
         }
-        
+
         ul {
             clear: left;
             list-style: none;
@@ -85,7 +85,7 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
             position: relative;
             width: 100%;
         }
-        
+
         li {
             border-color: $sagovau-color-brand/2 + $sagovau-color-brand--light/2;
             border-style: solid;
@@ -95,89 +95,88 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
             position: relative;
             width: 100%;
         }
-        
+
         a {
             color: $sagovau-color-brand;
             display: block;
             text-decoration: none;
             width: 100%;
-            
+
             @include media-query($sagovau-primary-navigation-breakpoint) {
                 color: $sagovau-color-text-reverse;
             }
-            
+
             &:hover, &:focus {
                 text-decoration: underline;
             }
-            
+
         }
-        
+
         // Level one styling
-        
+
         /**
-         * 1. Show the drop-down menu (levels two and three) on hover/focus on 
+         * 1. Show the drop-down menu (levels two and three) on hover/focus on
          *    larger screens.
          **/
-        
+
         & > ul {
             background-color: $sagovau-color-brand--light;
             padding: 0 $sagovau-spacing-unit-base--small;
-            
+
             @include media-query($sagovau-primary-navigation-breakpoint) {
                 padding: 0;
             }
-                        
+
         }
-        
+
         & > ul > li {
             width: 100%;
-            
+
             @include media-query($sagovau-primary-navigation-breakpoint) {
                 border-width: 0;
                 float: left;
                 width: auto;
-            
+
                 &:hover, &:focus {  /* [1] */
-                    
+
                     & > a {
                         background: $sagovau-color-brand--light;
                         background: rgba($sagovau-color-brand--light, 0.95);
                         color: $sagovau-color-brand;
                     }
-                    
+
                     .dropdown-container {
                         display:block;
                     }
-                    
+
                 }
-            
+
             }
-            
+
             & + li {
                 border-width: 1px 0 0 0;
-                
+
                 @include media-query($sagovau-primary-navigation-breakpoint) {
                     border-width: 0 0 0 1px;
                 }
             }
-        
+
             & > a {
                 line-height: 100%;
                 height: $sagovau-primary-navigation-height;
                 padding: 14px $sagovau-spacing-unit-base--small;
-                
+
                 &.active {
                     font-weight: bold;
                 }
             }
-        
+
         }
-        
-        
+
+
         .dropdown-container {
             background: $sagovau-color-brand--light;
             background: rgba($sagovau-color-brand--light, 0.95);
-            border: solid 1px;
             border-collapse: separate;  // Necessary for IE9 to render box shadows
             border-top-width: 0;
             box-shadow: $sagovau-spacing-unit-base--small/4 $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small rgba(0,0,0,0.3);
@@ -188,11 +187,7 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
             position: absolute;
             overflow: visible;
             width: $sagovau-primary-navigation-dropdown-width;
-            
-            .boxshadow & {
-                border: none;
-            }
-            
+
             .last > & {
                 left: auto;
                 right: -1px;
@@ -215,15 +210,15 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
             float: left;
             margin-right: -100%;
             width: ($sagovau-primary-navigation-dropdown-width - 3 * $sagovau-spacing-unit-base--small)/2;
-            
+
             &.last {
                   margin-left: ($sagovau-primary-navigation-dropdown-width - $sagovau-spacing-unit-base--small)/2;
                   margin-right: -100%;
             }
-            
-            
+
+
             & > ul {
-            
+
                 & > li > a { /* Menu headings */
                     background: $sagovau-color-brand;
                     background: rgba($sagovau-color-brand, 0.80);
@@ -231,27 +226,27 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
                     font-weight: bold;
                     margin-bottom: $sagovau-spacing-unit-base--small;
                     padding: 0.5 * $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small;
-                    
+
                     &:hover {
                         background: $sagovau-color-brand;
                     }
-                
+
                 }
-                
+
                 & > li > ul {
                     margin-bottom: $sagovau-spacing-unit-base;
                     padding-left: $sagovau-spacing-unit-base--small;
-                
+
                     & > li > a { /* Menu subheadings */
                         color: $sagovau-color-text-base;
                         margin: 0;
                         padding: 0;
                     }
-                    
+
                 }
-                
+
             }
-            
+
         }
-        
+
     }
