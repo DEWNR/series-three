@@ -18,13 +18,11 @@ $sagovau-page-shadow-top-right: url(#{$sagovau-path-shared}alpha-page-shadow-top
 
  
 /*div*/.#{$sagovau-namespace}page-shadow {
-    box-shadow: $sagovau-box-shadow;
-    
+
     @include media-query(large-and-up) {
         background-image: $sagovau-page-shadow-bottom-left, $sagovau-page-shadow-bottom-right, $sagovau-page-shadow-bottom-center, $sagovau-page-shadow-top-right, $sagovau-page-shadow-top-left;
         background-repeat: no-repeat, no-repeat, repeat-x, repeat-y, repeat-y;
         background-position: bottom left, bottom right, bottom, top right, top left;
-        box-shadow: none;
     }
     
 }
