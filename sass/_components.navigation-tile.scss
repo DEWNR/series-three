@@ -6,7 +6,7 @@
  * Navigation tiles for level one pages.
  **/
 
-$sagovau-navigation-tile-gradient-height: 2 * $sagovau-spacing-unit-base;
+$sagovau-navigation-tile-gradient-height: 2 * $sagovau-spacing-unit-base !default;
 
 
 
@@ -57,7 +57,9 @@ $sagovau-navigation-tile-gradient-height: 2 * $sagovau-spacing-unit-base;
     /*div*/.#{$sagovau-namespace}navigation-tile__text {
         
         @include media-query(large-and-up) {
+            background-image: url(#{$sagovau-path-shared}s3-navigation-tile-background.png); /* fallback for browsers not supporting css gradients */
             background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,1) $sagovau-navigation-tile-gradient-height);    /* [1] */
+            background-position: 50% 0;
             padding: $sagovau-spacing-unit-base;
             position: relative;   /* [2] */
         }
