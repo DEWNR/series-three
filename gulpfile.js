@@ -5,6 +5,9 @@ var argv = require('yargs').argv,   // Pass agruments using the command line
     del = require('del'),   // Delete unwanted files and folders (eg dist before production build)
     gulp = require('gulp'),
     jsList,   // List of JavaScripts to combine
+    mustache = require('gulp-mustache-plus'),
+    mustacheData,
+    mustachePartials,
     passthrough = require('gulp-empty'),    // Pass through an unaltered stream; useful for conditional processing
     paths,  // Frequently used file paths
     rev = require('gulp-rev'),      // Add a hash-based fingerprint to the output filename
@@ -76,6 +79,34 @@ jsList = [
 
 
 
+// Define Mustache data and partials
+
+mustacheData = {
+  "navigation-tiles": [
+    { 
+      "navigation-tile-url": "#",
+      "navigation-tile-title": "Navigation Title 1",
+      "navigation-tile-teaser": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },{ 
+      "navigation-tile-url": "#",
+      "navigation-tile-title": "Navigation Title 2",
+      "navigation-tile-teaser": "Nam id nibh ac lacus molestie consequat. Nunc vel arcu at nisl volutpat mollis a id sem."
+    },{ 
+      "navigation-tile-url": "#",
+      "navigation-tile-title": "Navigation Title 3",
+      "navigation-tile-teaser": "Donec ante justo, scelerisque eget mauris id"
+    }
+  ]
+};
+
+mustachePartials = {
+  "navigation-tiles": "./templates/partials/navigation-tile.mustache"
+};
+
+
+
+
+
 // Redefine optimisation processes so they're not used for development builds
 
 if (!argv.production) {
@@ -94,6 +125,21 @@ if (!argv.production) {
 
 gulp.task('clean', function () {
     del.sync([paths.dest.root]);
+});
+
+
+
+
+
+// Mustache template files
+
+gulp.task('mustache', function () {
+  gulp.src("./templates/*.mustache")
+      .pipe(mustache(
+        mustacheData, 
+        {}, 
+        mustachePartials
+      )).pipe(gulp.dest(paths.dest.root));
 });
 
 
