@@ -1,17 +1,26 @@
-{{#navigation-tiles}}
-  <a class="navigation-tile" href="{{ navigation-tile-url }}">
-      
-    <div class="u-hidden  u-display-block-large-and-up">
-      <div class="navigation-tile__image    fixed-aspect-ratio  fixed-aspect-ratio--1x1"></div>
-    </div>
+            <article class="u-mt" role="article">
 
-    <div class="navigation-tile__text">
-      
-      <h2 class="navigation-tile__title">{{ navigation-tile-title }}</h2>
-      
-      <p class="u-hidden u-display-block-large-and-up">{{ navigation-tile-teaser }}</p>
-      
-    </div><!-- /.navigation-tile__text -->
+                <h1>Plan your visit</h1>
 
-  </a><!-- /.navigation-tile -->
-{{/navigation-tiles}}
+                <ul class="layout  layout--small">
+                    {{#navigation-tiles}}
+                    <li class="layout__item    u-1-of-3-large-and-up  u-1-of-4-huge">
+                        
+                        <a class="navigation-tile" href="{{ navigation-tile-url }}">
+                            <div class="u-hidden  u-display-block-large-and-up">
+                              <div class="navigation-tile__image    fixed-aspect-ratio  fixed-aspect-ratio--1x1" style="background-image: url(https://placehold.it/640x640)"></div>
+                            </div>
+
+                            <div class="navigation-tile__text">
+
+                              <h2 class="navigation-tile__title">{{ navigation-tile-title }}</h2>
+
+                              <p class="u-hidden u-display-block-large-and-up">{{ navigation-tile-teaser }}</p>
+
+                            </div><!-- /.navigation-tile__text -->
+                        </a><!-- /.navigation-tile -->
+
+                    <!-- /li.layout__item -->
+                    {{/navigation-tiles}}
+                </ul>
+            </article>
