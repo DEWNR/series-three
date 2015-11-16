@@ -9,10 +9,10 @@
  **/
 
 $sagovau-icon-module-icon-type: fees, find, info !default;
- 
+
 // Make sure the "module" extend-only component is included before this content.
 
-@import "_components.module.scss";
+@import "components.module";
 
 
 /*a*/.#{$sagovau-namespace}icon-module {
@@ -43,29 +43,29 @@ $sagovau-icon-module-icon-type: fees, find, info !default;
 }
 
 @each $icon-type in $sagovau-icon-module-icon-type {
-    
+
     /*a*/.#{$sagovau-namespace}icon-module--#{$icon-type} {
-        
+
         @include media-query(large-and-up) {
             background-image: url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-icon-#{$icon-type}.svg);
         }
-        
+
     }
 
 }
-    
-    
+
+
     /*h2*/.#{$sagovau-namespace}icon-module__title {
         @extend %#{$sagovau-namespace}module__title;
-        
-        @include media-query(large-and-up) {            
+
+        @include media-query(large-and-up) {
             $font-size: map-get($sagovau-h3-settings, font-size);         // Get the h3 font size
-            
+
             height: 0;
             margin-top: -0.5 * $font-size;  // Set the font size to half the h3 font size
             padding: 0;
             position: absolute;
             top: 50%;
         }
-    
+
     }

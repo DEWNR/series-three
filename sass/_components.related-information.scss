@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * Basic formatting for information that is tangentially related to the main 
+ * Basic formatting for information that is tangentially related to the main
  * page content, such as image galleries, links to other posts, references, etc.
  */
 
@@ -12,13 +12,13 @@
     .#{$sagovau-namespace}related-information__group {
         @extend %margin-bottom;
         @extend %#{$sagovau-namespace}no-print;
-        
+
         & + & {
             border-top: 1px solid tint($sagovau-color-brand, 50%);
             padding-top: $sagovau-spacing-unit-base;
         }
     }
-    
+
         .#{$sagovau-namespace}related-information__title {
             @extend %beta;
         }

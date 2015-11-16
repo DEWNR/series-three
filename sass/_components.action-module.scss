@@ -8,33 +8,33 @@
  * in multiple files does not cause duplication.
  **/
 
- 
+
 // Make sure the "module" extend-only component is included before this content.
 
-@import "_components.module.scss";
+@import "components.module";
 
 
 /*a*/.#{$sagovau-namespace}action-module {
-    
+
     /**
      * 1. Trigger new block formatting context so that the background surrounds
      *    all elements.
      *
      * 2. Apply negative margins to counteract the container's padding
      **/
-    
+
     @include media-query(large-and-up) {
         background-color: $sagovau-color-brand--light;
         margin: 0 (-$sagovau-spacing-unit-base--small) (-$sagovau-spacing-unit-base--small); /* [2] */
         overflow: hidden;     /* [1] */
 
     }
-    
+
     @include media-query(huge) {
         background-color: transparent;
         margin: 0;
     }
-    
+
 }
 
 
@@ -50,45 +50,45 @@
 
     /*ul*/.#{$sagovau-namespace}action-module__list {
         list-style: none;
-        
+
         @include media-query(large-and-up) {
             margin: 0 $sagovau-spacing-unit-base--small;
             text-align: justify;
 
             &:after {   /* [3] */
-                content: '';
+                content: "";
                 display: inline-block;
                 width: 100%;
             }
-        
+
         }
-        
+
     }
-        
+
 
         /*li*/.#{$sagovau-namespace}action-module__item {
             $large-font-size: map-get($sagovau-h3-settings, font-size);         // Get the h3 font size
             $bullet-space: 1.2em; // Allow for width of bullet plus some additional space
-                
+
             padding-left: $bullet-space;
             text-align: left;           // Override text-align on parent
-            
+
             @include media-query(large-and-up) {
                 display: inline-block;
                 font-size: $large-font-size;   // Set the font size to match h3
             }
-            
+
             @include media-query(huge) {
                 display: block;
                 font-size: $sagovau-font-size-base;   // Revert to normal font size
             }
-            
+
             .touch & {
                 margin-top: -$sagovau-spacing-unit-base--small;
                 padding-bottom: $sagovau-spacing-unit-base--small;
                 padding-top: $sagovau-spacing-unit-base--small;
             }
-            
+
             &::before {
                 background-image: url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-circle-arrow.svg);
                 background-repeat: no-repeat;
@@ -100,17 +100,17 @@
                 margin-left: -$bullet-space;
                 vertical-align: middle;
                 width: $sagovau-font-size-base;
-                
+
                 @include media-query(large-and-up) {
                     height: $large-font-size;
                     width: $large-font-size;
                 }
-                
+
                 @include media-query(huge) {
                     height: $sagovau-font-size-base;
                     width: $sagovau-font-size-base;
                 }
-                
+
             }
-            
+
         }

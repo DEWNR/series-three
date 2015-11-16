@@ -14,10 +14,10 @@
         @extend %#{$inuit-namespace}list-bare;
         margin-left: $sagovau-spacing-unit-base;
     }
-        
+
         /*li*/.#{$sagovau-namespace}secondary-navigation__item {
             font-weight: normal;
-            
+
             &::before {
                 background-image: url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-circle-arrow.svg);
                 background-repeat: no-repeat;
@@ -30,11 +30,11 @@
                 vertical-align: middle;
                 width: $sagovau-font-size-base;
             }
-            
+
             &.is-active.is-parent::before {
                 transform: rotate(90deg);
             }
-            
+
         }
 
         /*li*/.#{$sagovau-namespace}secondary-navigation__item--level-1 {
@@ -46,4 +46,3 @@
                 pointer-events: none;
                 text-decoration: none;
             }
-    

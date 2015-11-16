@@ -25,95 +25,95 @@ $sagovau-enable-footer--brand-secondary: false !default;
 }
 
     /**
-     * Because the site design, it's easiest to create the unusual curve of the 
+     * Because the site design, it's easiest to create the unusual curve of the
      * footer using inline SVG and divs.
      *
      * 1. Remove background elements from the usual flow
      **.
-     
+
     /*div, svg*/.#{$sagovau-namespace}site-footer__background {
         fill: $sagovau-color-brand;
         position: absolute;   /* [3] */
-        
+
         @if $sagovau-enable-footer--brand-secondary == true {
-            
+
             /*footer*/.#{$sagovau-namespace}site-footer--brand-secondary & {
-               fill: $sagovau-color-brand-secondary;
+                fill: $sagovau-color-brand-secondary;
             }
-            
+
         }
-        
+
     }
-    
+
     /*svg*/.#{$sagovau-namespace}site-footer__background--primary {
         border-bottom-left-radius: $sagovau-spacing-unit-base--small;
     }
-    
+
     /*div*/.#{$sagovau-namespace}site-footer__background--secondary {
         background-color: $sagovau-color-brand;
         border-bottom-right-radius: $sagovau-spacing-unit-base--small;
         height: $sagovau-footer-background-height-secondary;
         right: 0;
         width: 80%;
-        
+
         @if $sagovau-enable-footer--brand-secondary == true {
-            
+
             /*footer*/.#{$sagovau-namespace}site-footer--brand-secondary & {
                 background-color: $sagovau-color-brand-secondary;
             }
-            
+
         }
-        
+
     }
-    
-    
+
+
     /*div*/.#{$sagovau-namespace}site-footer__disclaimer {
         background-color: tint($sagovau-color-brand, 20%);
         background-image: url(#{$sagovau-path-shared}regional-menu-background.png);
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) $sagovau-spacing-unit-base * 0.65);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) $sagovau-spacing-unit-base * 0.65);
         background-repeat: repeat-x;
         font-size: round($sagovau-font-size-base / 1.2);
         padding: $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base;
         position: relative;
     }
-    
+
     /*a*/.#{$sagovau-namespace}site-footer__link {
         color: $sagovau-color-text-reverse;
     }
-    
+
     /*div*/.#{$sagovau-namespace}site-footer__link--partner-logo {
         text-decoration: none;
-        
+
         & + & {
             margin-left: $sagovau-spacing-unit-base;
         }
-        
+
     }
-    
+
     /*div*/.#{$sagovau-namespace}site-footer__partners {
         background-color: $sagovau-color-brand;
         box-shadow: $sagovau-box-shadow;
         padding: 0 $sagovau-spacing-unit-base;
         position: relative;
         text-align: center;
-        
+
         @include media-query(large-and-up) {
             background: transparent;
             box-shadow: none;
             max-width: 520px;
             text-align: left;
         }
-        
+
     }
-    
+
     /*div*/.#{$sagovau-namespace}site-footer__switch {
         padding-top: $sagovau-spacing-unit-base;
         text-align: center;
-        
+
         @include media-query(large-and-up) {
-          position: absolute;
-          right: $sagovau-spacing-unit-base;
-          bottom: $sagovau-spacing-unit-base;
+            position: absolute;
+            right: $sagovau-spacing-unit-base;
+            bottom: $sagovau-spacing-unit-base;
         }
-        
+
     }

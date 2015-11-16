@@ -16,7 +16,7 @@ $sagovau-page-shadow-bottom-right: url(#{$sagovau-path-shared}alpha-page-shadow-
 $sagovau-page-shadow-top-left: url(#{$sagovau-path-shared}alpha-page-shadow-top-left.png);
 $sagovau-page-shadow-top-right: url(#{$sagovau-path-shared}alpha-page-shadow-top-right.png);
 
- 
+
 /*div*/.#{$sagovau-namespace}page-shadow {
 
     @include media-query(large-and-up) {
@@ -24,5 +24,5 @@ $sagovau-page-shadow-top-right: url(#{$sagovau-path-shared}alpha-page-shadow-top
         background-repeat: no-repeat, no-repeat, repeat-x, repeat-y, repeat-y;
         background-position: bottom left, bottom right, bottom, top right, top left;
     }
-    
+
 }

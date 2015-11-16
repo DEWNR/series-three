@@ -17,26 +17,26 @@ $sagovau-slider-control-stroke-width: 2px;
     padding-bottom: 2 * $sagovau-spacing-unit-base--small + 1.5 * $sagovau-spacing-unit-base;
     padding-top: 3px;
     position: relative;
-    
+
     @include media-query(large-and-up) {
-        border-bottom: none;
+        border-bottom: 0;
         margin-bottom: $sagovau-spacing-unit-base--small;
         padding-bottom: 0;
     }
-    
+
 }
 
 /*div*/.#{$sagovau-namespace}slider--loading { }    // Used to hide all but the first item while loading
 
 /*div*/.#{$sagovau-namespace}slider--static {
     padding-bottom: 1 * $sagovau-spacing-unit-base--small;
-    
+
     @include media-query(large-and-up) {
         padding-bottom: 0;
     }
-    
+
 }
-    
+
     /*div*/.#{$sagovau-namespace}slider__controls {
         bottom: 0;
         padding: $sagovau-spacing-unit-base--small;
@@ -45,17 +45,17 @@ $sagovau-slider-control-stroke-width: 2px;
         text-align: center;
         width: 100%;
         z-index: 1;
-        
+
         @include media-query(large-and-up) {
             bottom: $sagovau-spacing-unit-base--small;
             text-align: left;
             width: auto;
         }
-            
+
         @include media-query(huge) {
             bottom: 0;
         }
-        
+
     }
 
         /*button*/.#{$sagovau-namespace}slider__control {
@@ -74,15 +74,15 @@ $sagovau-slider-control-stroke-width: 2px;
 
             &:focus {
                 outline: 0;
-                box-shadow: 0 0 3px 1px #4D90FE;
+                box-shadow: 0 0 3px 1px #4d90fe;
             }
-            
+
             & + & {
                 margin-left: $sagovau-spacing-unit-base;
             }
 
         }
-        
+
         /*button*/.#{$sagovau-namespace}slider__control--fill {
             fill: $sagovau-color-brand;
         }
@@ -92,19 +92,19 @@ $sagovau-slider-control-stroke-width: 2px;
             //stroke-linecap: round;
             stroke-width: $sagovau-slider-control-stroke-width;
         }
-            
+
             /*svg*/.#{$sagovau-namespace}slider__icon {
                 margin-top: -$sagovau-slider-control-border-width;
                 margin-left: -$sagovau-slider-control-border-width;
             }
 
-    
+
     /*ul*/.#{$sagovau-namespace}slider__stage {
         @extend %#{$inuit-namespace}list-bare;
         overflow: hidden;     // Hide anything outside the stage
         position: relative;   // Make sure the stage's children don't take up any space
     }
-    
+
         /**
          * 1. Make sure the first item is postioned in front of the others so
          *    so there's no flash of content on load.
@@ -120,9 +120,9 @@ $sagovau-slider-control-stroke-width: 2px;
             &:first-child {
                 z-index: 2;      /* [1] */
             }
-            
+
             /*ul*/.#{$sagovau-namespace}slider__stage--loading & + & {
                 display: none;   /* [2] */
             }
-                
+
         }

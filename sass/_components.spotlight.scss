@@ -24,23 +24,24 @@ $sagovau-spotlight-overlay-padding-right: 50px !default; // The padding on the r
     position: relative;
     overflow: hidden;
     text-decoration: none;
-    
+
     @include media-query(large-and-up) {
         padding: 0;
     }
-    
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
         text-decoration: underline;
     }
-    
+
 }
-    
+
     /**
      * A absolutely positioned container to make sure the image is sized correctly
      **/
 
     /*div*/.#{$sagovau-namespace}spotlight__background {
-        
+
         @include media-query(huge) {
             bottom: 0;
             left: $sagovau-spotlight-image-left-offset;
@@ -48,7 +49,7 @@ $sagovau-spotlight-overlay-padding-right: 50px !default; // The padding on the r
             right: 0;
             top: 0;
         }
-        
+
     }
 
         /*img*/.#{$sagovau-namespace}spotlight__image {
@@ -58,19 +59,19 @@ $sagovau-spotlight-overlay-padding-right: 50px !default; // The padding on the r
             height: 0;
             max-width: auto;
             margin: 0;
-            padding-bottom: $sagovau-spotlight-image-height/480px * 100%;   // Scale to reach max at 480px breakpoint
+            padding-bottom: ($sagovau-spotlight-image-height / 480px) * 100%;   // Scale to reach max at 480px breakpoint
             position: relative;
             width: 100%;
-            
-            
+
+
             // Add a negative bottom margin if using a gradient
-            
+
             @if $sagovau-spotlight-gradient {
                 margin-bottom: -$sagovau-spotlight-gradient-height;
             }
 
             @include media-query(small-and-up) {
-                padding-bottom: $sagovau-spotlight-image-height/720px * 100%;   // Scale to reach max at 720px breakpoint
+                padding-bottom: ($sagovau-spotlight-image-height / 720px) * 100%;   // Scale to reach max at 720px breakpoint
             }
 
             @include media-query(large-and-up) {
@@ -87,11 +88,11 @@ $sagovau-spotlight-overlay-padding-right: 50px !default; // The padding on the r
         /*div*/.#{$sagovau-namespace}spotlight__image--left {
             background-position: left;
         }
-        
+
         /*div*/.#{$sagovau-namespace}spotlight__image--25\% {
             background-position: 25%;
         }
-        
+
         /*div*/.#{$sagovau-namespace}spotlight__image--75\% {
             background-position: 75%;
         }
@@ -103,19 +104,19 @@ $sagovau-spotlight-overlay-padding-right: 50px !default; // The padding on the r
 
     /*div*/.#{$sagovau-namespace}spotlight__text {
         @include inuit-font-size($sagovau-spotlight-font-size-base);
-        
+
         @if $sagovau-spotlight-gradient {
-                background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,1) $sagovau-spotlight-gradient-height);
+            background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 1) $sagovau-spotlight-gradient-height);
         }
-        
+
         padding: $sagovau-spacing-unit-base $sagovau-spacing-unit-base--small;
         padding-bottom: $sagovau-spacing-unit-base--small;
         position: relative;
-        
+
         @include media-query(large-and-up) {
             padding-right: 150px;  // Ensure that the spotlight text doesn't conflict with the slider controls
         }
-        
+
         @include media-query(huge) {
             background: url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-spotlight-overlay.svg);
             background-position: right;
@@ -127,16 +128,16 @@ $sagovau-spotlight-overlay-padding-right: 50px !default; // The padding on the r
             vertical-align: middle;
             width: $sagovau-spotlight-overlay-width;
         }
-        
-        & > :last-child {
+
+        > :last-child {
             margin-bottom: 0;
         }
-        
+
     }
-        
+
         /*h2*/.#{$sagovau-namespace}spotlight__title {
             @include inuit-font-size($sagovau-spotlight-font-size-title);
-            
+
             /*a*/.#{$sagovau-namespace}spotlight:hover &, /*a*/.#{$sagovau-namespace}spotlight:focus & {
                 text-decoration: underline;
             }

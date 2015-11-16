@@ -37,7 +37,7 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
 
     @include media-query($sagovau-primary-navigation-breakpoint) {
         display: block;  /* [3] */
-        height: $sagovau-primary-navigation-height
+        height: $sagovau-primary-navigation-height;
     }
 
     .no-js & {
@@ -71,7 +71,7 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
      **/
 
     /*nav*/.#{$sagovau-namespace}primary-navigation__legacy-menu {
-        box-shadow: 0 $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small rgba(0,0,0,0.3);
+        box-shadow: 0 $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small rgba(0, 0, 0, 0.3);
 
         @include media-query($sagovau-primary-navigation-breakpoint) {
             box-shadow: none;
@@ -87,7 +87,7 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
         }
 
         li {
-            border-color: $sagovau-color-brand/2 + $sagovau-color-brand--light/2;
+            border-color: ($sagovau-color-brand / 2) + ($sagovau-color-brand--light / 2);
             border-style: solid;
             border-width: 0;
             margin: 0;
@@ -106,7 +106,8 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
                 color: $sagovau-color-text-reverse;
             }
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 text-decoration: underline;
             }
 
@@ -119,7 +120,7 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
          *    larger screens.
          **/
 
-        & > ul {
+        > ul {
             background-color: $sagovau-color-brand--light;
             padding: 0 $sagovau-spacing-unit-base--small;
 
@@ -129,7 +130,7 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
 
         }
 
-        & > ul > li {
+        > ul > li {
             width: 100%;
 
             @include media-query($sagovau-primary-navigation-breakpoint) {
@@ -137,31 +138,32 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
                 float: left;
                 width: auto;
 
-                &:hover, &:focus {  /* [1] */
+                &:hover,
+                &:focus {  /* [1] */
 
-                    & > a {
+                    > a {
                         background: $sagovau-color-brand--light;
                         background: rgba($sagovau-color-brand--light, 0.95);
                         color: $sagovau-color-brand;
                     }
 
                     .dropdown-container {
-                        display:block;
+                        display: block;
                     }
 
                 }
 
             }
 
-            & + li {
-                border-width: 1px 0 0 0;
+            + li {
+                border-width: 1px 0 0;
 
                 @include media-query($sagovau-primary-navigation-breakpoint) {
                     border-width: 0 0 0 1px;
                 }
             }
 
-            & > a {
+            > a {
                 line-height: 100%;
                 height: $sagovau-primary-navigation-height;
                 padding: 14px $sagovau-spacing-unit-base--small;
@@ -179,7 +181,7 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
             background: rgba($sagovau-color-brand--light, 0.95);
             border-collapse: separate;  // Necessary for IE9 to render box shadows
             border-top-width: 0;
-            box-shadow: $sagovau-spacing-unit-base--small/4 $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small rgba(0,0,0,0.3);
+            box-shadow: ($sagovau-spacing-unit-base--small / 4)  $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small rgba(0, 0, 0, 0.3);
             display: none;
             left: -1px;
             padding: $sagovau-spacing-unit-base--small;
@@ -209,38 +211,42 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
         .dropdown-column {
             float: left;
             margin-right: -100%;
-            width: ($sagovau-primary-navigation-dropdown-width - 3 * $sagovau-spacing-unit-base--small)/2;
+            width: ($sagovau-primary-navigation-dropdown-width - 3 * $sagovau-spacing-unit-base--small) / 2;
 
             &.last {
-                  margin-left: ($sagovau-primary-navigation-dropdown-width - $sagovau-spacing-unit-base--small)/2;
-                  margin-right: -100%;
+                margin-left: ($sagovau-primary-navigation-dropdown-width - $sagovau-spacing-unit-base--small) / 2;
+                margin-right: -100%;
             }
 
 
-            & > ul {
+            > ul {
 
-                & > li > a { /* Menu headings */
-                    background: $sagovau-color-brand;
-                    background: rgba($sagovau-color-brand, 0.80);
-                    color: white;
-                    font-weight: bold;
-                    margin-bottom: $sagovau-spacing-unit-base--small;
-                    padding: 0.5 * $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small;
+                > li {
 
-                    &:hover {
+                    > a { /* Menu headings */
                         background: $sagovau-color-brand;
+                        background: rgba($sagovau-color-brand, 0.80);
+                        color: #fff;
+                        font-weight: bold;
+                        margin-bottom: $sagovau-spacing-unit-base--small;
+                        padding: 0.5 * $sagovau-spacing-unit-base--small $sagovau-spacing-unit-base--small;
+
+                        &:hover {
+                            background: $sagovau-color-brand;
+                        }
+
                     }
 
-                }
+                    > ul {
+                        margin-bottom: $sagovau-spacing-unit-base;
+                        padding-left: $sagovau-spacing-unit-base--small;
 
-                & > li > ul {
-                    margin-bottom: $sagovau-spacing-unit-base;
-                    padding-left: $sagovau-spacing-unit-base--small;
+                        > li > a { /* Menu subheadings */
+                            color: $sagovau-color-text-base;
+                            margin: 0;
+                            padding: 0;
+                        }
 
-                    & > li > a { /* Menu subheadings */
-                        color: $sagovau-color-text-base;
-                        margin: 0;
-                        padding: 0;
                     }
 
                 }

@@ -8,7 +8,7 @@
 
 // Import the global settings
 
-@import "dewnr-bedrock/sass/_settings.general.scss";
+@import "dewnr-bedrock/sass/settings.general";
 
 
 
@@ -32,19 +32,19 @@ $sagovau-file-prefix: "";
 
 /* = Colours = */
 
-$sagovau-color-text-base: #333333;
+$sagovau-color-text-base: #333;
 
-$sagovau-color-background-base: #666666;
-$sagovau-color-background-content: white;
-$sagovau-color-background-sitemap: #333333;
+$sagovau-color-background-base: #666;
+$sagovau-color-background-content: #fff;
+$sagovau-color-background-sitemap: #333;
 
 
 
 
 
 /* = Fonts =*/
- 
-$sagovau-font-family-base: "Frutiger W01",Helvetica,Arial,sans-serif !default;
+
+$sagovau-font-family-base: "Frutiger W01", Helvetica, Arial, sans-serif !default;
 $sagovau-font-family-highlight: $sagovau-font-family-base;
 
 
@@ -68,4 +68,4 @@ $sagovau-max-width: 1186px;
 
 /* = Animations and general appearance = */
 
-$sagovau-box-shadow: 0 0.25 * $sagovau-spacing-unit-base 0.5 * $sagovau-spacing-unit-base rgba(0,0,0,0.3);
+$sagovau-box-shadow: 0 0.25 * $sagovau-spacing-unit-base 0.5 * $sagovau-spacing-unit-base rgba(0, 0, 0, 0.3);
