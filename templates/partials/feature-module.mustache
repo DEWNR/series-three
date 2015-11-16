@@ -1,0 +1,21 @@
+<ul class="layout  layout--small">
+    {{#feature-modules}}
+    <li class="layout__item  u-1-of-3-large-and-up">
+
+        <a class="feature-module" href="{{ feature-module-url }}">
+
+            <h2 class="feature-module__title">{{ feature-module-title }}</h2>
+
+            <!-- Hide the image's parent element to prevent it from being downloaded -->
+
+            <div class="u-hidden  u-display-block-large-and-up">
+
+                <div class="feature-module__image" style="background-image: url(https://placehold.it/632x482)"></div>
+
+            </div>
+
+        </a><!-- /.feature-module -->
+
+    <!-- /li.layout item -->
+    {{/feature-modules}}
+</ul>
