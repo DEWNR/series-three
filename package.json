@@ -5,7 +5,7 @@
   "author": "The DEWNR Internet Team <DEWNR.Internet@sa.gov.au>",
   "repository": "dewnr/alpha-series",
   "dependencies": {
-    "dewnr-bedrock": "0.2.0"
+    "dewnr-bedrock": "0.2.2"
   },
   "license": "CC-BY-4.0",
   "engines": {
