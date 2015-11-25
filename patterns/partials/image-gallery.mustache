@@ -1,16 +1,17 @@
+
 <div class="image-gallery">
-    
-    {{#image-gallery-items}}
+
+    {{#imageGallery}}
       <figure class="image-gallery__item">
-        
-        <img class="image_gallery__image" src="{{ image-gallery-image }}" />
-        
-        <figcaption class="image_gallery__caption">{{ image-gallery-caption }}</figcaption>
-        
+
+        <img class="image_gallery__image" src="{{ image }}" />
+
+        <figcaption class="image_gallery__caption">{{ caption }}</figcaption>
+
       </figure>
       <!-- Separate list items so they can be justified -->
-    {{/image-gallery-items}}
-    
+    {{/imageGallery}}
+
   </ul>
-  
+
 </div>
