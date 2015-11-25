@@ -1,0 +1,24 @@
+[
+    {
+        "index": "0",
+        "title": "Title 1",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "class": "",
+        "image": "https://placehold.it/160x160",
+        "href": "#"
+    },{
+        "index": "1",
+        "title": "Title 2",
+        "text": "Proin posuere turpis felis, vel dapibus sem vulputate non.",
+        "class": "",
+        "image": "https://placehold.it/160x160",
+        "href": "#"
+    },{
+        "index": "2",
+        "title": "Title 3",
+        "text": "Etiam convallis ante eget augue ullamcorper.",
+        "class": "",
+        "image": "https://placehold.it/160x160",
+        "href": "#"
+    }
+]

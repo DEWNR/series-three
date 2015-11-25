@@ -1,0 +1,18 @@
+[
+    {
+        "index": "0",
+        "title": "Park fees",
+        "class": "  icon-module--fees",
+        "href": "#"
+    },{
+        "index": "1",
+        "title": "Find us",
+        "class": "  icon-module--find",
+        "href": "#"
+    },{
+        "index": "2",
+        "title": "Tour times",
+        "class": "  icon-module--info",
+        "href": "#"
+    }
+]

@@ -24,6 +24,7 @@ $sagovau-module-loaded: false !default; /* [1] */
         border-style: solid;
         border-width: 0 0 1px;
         display: block;
+        font-size: $sagovau-font-size-base;
         margin-bottom: 0;
         position: relative;
         @include ui-link;       // Underline on hover/focus
