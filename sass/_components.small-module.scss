@@ -51,6 +51,14 @@
             /*a*/.#{$sagovau-namespace}small-module--index-2 & {
                 border-radius: $sagovau-spacing-unit-base 0 $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
             }
+
+            /*a*/.#{$sagovau-namespace}small-module--index-3 & {
+                border-radius: 0 $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
+            }
+
+            /*a*/.#{$sagovau-namespace}small-module--index-5 & {
+                border-radius: $sagovau-spacing-unit-base 0 $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
+            }
         }
 
     }

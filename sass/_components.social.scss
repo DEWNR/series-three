@@ -8,6 +8,7 @@
 
 
 /*div*/.#{$sagovau-namespace}social {
+    font-size: $sagovau-font-size-base;
     vertical-align: middle;
 
     @if mixin-exists(sagovau-social-custom-content) {

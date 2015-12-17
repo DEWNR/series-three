@@ -7,7 +7,9 @@
  **/
 
 
-/*div*/.#{$sagovau-namespace}image-gallery { }
+/*div*/.#{$sagovau-namespace}image-gallery {
+    font-size: $sagovau-font-size-base;
+}
 
     /*figure*/.#{$sagovau-namespace}image-gallery__item {
         text-align: center;

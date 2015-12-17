@@ -7,7 +7,9 @@
  * page content, such as image galleries, links to other posts, references, etc.
  */
 
-.#{$sagovau-namespace}related-information {}
+.#{$sagovau-namespace}related-information {
+    font-size: $sagovau-font-size-base;
+}
 
     .#{$sagovau-namespace}related-information__group {
         @extend %margin-bottom;

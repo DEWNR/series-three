@@ -20,6 +20,7 @@ $sagovau-enable-footer--brand-secondary: false !default;
 
 /*footer*/.#{$sagovau-namespace}site-footer {
     color: $sagovau-color-text-reverse;
+    font-size: $sagovau-font-size-base;
     padding-bottom: $sagovau-spacing-unit-base;
     position: relative;   /* [1] */
 }

@@ -20,6 +20,7 @@ $sagovau-spotlight-overlay-padding-right: 50px !default; // The padding on the r
 /*a*/.#{$sagovau-namespace}spotlight {
     background-color: $sagovau-color-background-content;
     display: block;
+    font-size: $sagovau-font-size-base;
     margin: 0;
     position: relative;
     overflow: hidden;

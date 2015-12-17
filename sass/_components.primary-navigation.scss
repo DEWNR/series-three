@@ -29,6 +29,7 @@ $sagovau-primary-navigation-dropdown-width: 420px !default;
 
 /*nav*/.#{$sagovau-namespace}primary-navigation {
     display: none;   /* [1] */
+    font-size: $sagovau-font-size-base;
     height: 0;
 
     &.is-active {

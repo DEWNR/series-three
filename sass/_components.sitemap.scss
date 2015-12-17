@@ -14,6 +14,7 @@ $sagovau-sitemap-background: "#{$sagovau-path-png}#{$sagovau-file-prefix}-sitema
     background-position: left top;
     background-repeat: no-repeat;
     background-size: auto 100%;
+    font-size: $sagovau-font-size-base;
     min-height: 10 * $sagovau-spacing-unit-base;
     position: relative;
     overflow: hidden;
