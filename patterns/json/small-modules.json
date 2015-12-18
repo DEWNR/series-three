@@ -1,7 +1,7 @@
 [
     {
         "index": "0",
-        "title": "What;s happening",
+        "title": "What's happening",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "class": "",
         "image": "http://lorempixel.com/160/160/nature/7",
@@ -22,21 +22,21 @@
         "href": "#"
     },{
         "index": "3",
-        "title": "What;s happening",
+        "title": "Dolore magna aliqua",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "class": "",
         "image": "http://lorempixel.com/160/160/nature/7",
         "href": "#"
     },{
         "index": "4",
-        "title": "Latest blog",
+        "title": "Ut enim ad minim",
         "text": "Proin posuere turpis felis, vel dapibus sem vulputate non.",
         "class": "",
         "image": "http://lorempixel.com/160/160/nature/8",
         "href": "#"
     },{
         "index": "5",
-        "title": "Fundraising",
+        "title": "Exercitation ullamco",
         "text": "Etiam convallis ante eget augue ullamcorper.",
         "class": "",
         "image": "http://lorempixel.com/160/160/nature/3",
