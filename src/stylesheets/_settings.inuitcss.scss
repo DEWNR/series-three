@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #INUITCSS FRAMEWORK SETTINGS
+\*------------------------------------*/
+
+/**
+ * The site's inuitcss settings. Builds on the groups' inuitcss settings.
+ */
+
+// Import the series settings
+
+@import 'dewnr-bedrock/sass/settings.inuitcss';
+
+
+
+
+
+/* = Layout = */
+
+$inuit-enable-layout--rev: true;
+$inuit-enable-layout--right: true;
+
+
+
+
+
+/* = Spacing = */
+
+$inuit-enable-margins: true;
+$inuit-enable-margins--none: true;

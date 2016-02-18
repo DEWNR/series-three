@@ -1,0 +1,102 @@
+/*------------------------------------*\
+    #NAVIGATION-TILE
+\*------------------------------------*/
+
+/**
+ * Navigation tiles for level one pages.
+ **/
+
+$sagovau-navigation-tile-gradient-height: 2 * $sagovau-spacing-unit-base !default;
+
+
+
+/*a*/.#{$sagovau-namespace}navigation-tile {
+    @extend %#{$sagovau-namespace}module;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &--index-0 {
+        border-top-width: 1px;
+
+        @include media-query(large-and-up) {
+            border-top-width: 0;
+        }
+
+    }
+
+}
+
+
+    /**
+     * Use a div to create an image placeholder than won't cause the image to
+     * be downloaded on mobile. Use in conjunction with .fixed-aspect-ratio and
+     * .hidden
+     *
+     * 1. Use a negative bottom margin to allow the subsequent text
+     *    to overlap. Use the $sagovau-navigation-tile-gradient-height variable
+     *    to ensure the negative margin matches the gradient height.
+     **/
+
+    /*div*/.#{$sagovau-namespace}navigation-tile__image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: -$sagovau-navigation-tile-gradient-height;
+    }
+
+
+    /**
+     * 1. Use the $sagovau-navigation-tile-gradient-height variable
+     *    to ensure the gradient height matches the negative margin.
+     *
+     * 2. Relatively position the element so the background is displayed
+     *    above the preceding image.
+     **/
+
+    /*div*/.#{$sagovau-namespace}navigation-tile__text {
+
+        @include media-query(large-and-up) {
+            background-image: url(#{$sagovau-path-shared}s3-navigation-tile-background.png); /* fallback for browsers not supporting css gradients */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1) $sagovau-navigation-tile-gradient-height);    /* [1] */
+            background-position: 50% 0;
+            padding: $sagovau-spacing-unit-base;
+            position: relative;   /* [2] */
+        }
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+        /**
+         * 1. Add appropriate margins/padding to override default module title
+         *    on larger screens
+         **/
+
+        /*h2*/.#{$sagovau-namespace}navigation-tile__title {
+            @extend %#{$sagovau-namespace}module__title;
+
+
+
+            @include media-query(large-and-up) {
+                margin-bottom: $sagovau-spacing-unit-base; /* [1] */
+                padding: 0;      /* [2] */
+            }
+
+        }
+
+
+        /**
+         * 1. Make sure the underline is correct colour.
+         **/
+
+        /*h2*/.#{$sagovau-namespace}navigation-tile__details {
+            color: $sagovau-color-text-base;
+
+            .#{$sagovau-namespace}navigation-tile:hover & {
+                text-decoration: underline;  /* [1] */
+            }
+
+        }

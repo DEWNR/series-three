@@ -1,0 +1,128 @@
+/*------------------------------------*\
+    #SLIDER
+\*------------------------------------*/
+
+/**
+ * Styling for the Alpha series homepage slider.
+ **/
+
+$sagovau-slider-control-border-width: 2px;
+$sagovau-slider-control-stroke-width: 2px;
+
+
+/*div*/.#{$sagovau-namespace}slider {
+    border-bottom: 1px solid $sagovau-color-brand--medium-light;
+    margin: -$sagovau-spacing-unit-base--small;
+    margin-bottom: 0;
+    padding-bottom: 2 * $sagovau-spacing-unit-base--small + 1.5 * $sagovau-spacing-unit-base;
+    padding-top: 3px;
+    position: relative;
+
+    @include media-query(large-and-up) {
+        border-bottom: 0;
+        margin-bottom: $sagovau-spacing-unit-base--small;
+        padding-bottom: 0;
+    }
+
+}
+
+/*div*/.#{$sagovau-namespace}slider--loading { }    // Used to hide all but the first item while loading
+
+/*div*/.#{$sagovau-namespace}slider--static {
+    padding-bottom: 1 * $sagovau-spacing-unit-base--small;
+
+    @include media-query(large-and-up) {
+        padding-bottom: 0;
+    }
+
+}
+
+    /*div*/.#{$sagovau-namespace}slider__controls {
+        bottom: 0;
+        padding: $sagovau-spacing-unit-base--small;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+
+        @include media-query(large-and-up) {
+            bottom: $sagovau-spacing-unit-base--small;
+            text-align: left;
+            width: auto;
+        }
+
+        @include media-query(huge) {
+            bottom: 0;
+        }
+
+    }
+
+        /*button*/.#{$sagovau-namespace}slider__control {
+            background: $sagovau-color-background-content;
+            border: $sagovau-slider-control-border-width solid $sagovau-color-brand;
+            border-radius: 50%;
+            bottom: $sagovau-spacing-unit-base--small;
+            display: inline-block;
+            height: 1.5 * $sagovau-spacing-unit-base;
+            left: $sagovau-spacing-unit-base--small;
+            width: 1.5 * $sagovau-spacing-unit-base;
+
+            &:hover {
+                background: rgba($sagovau-color-background-content, 0.5);
+            }
+
+            &:focus {
+                outline: 0;
+                box-shadow: 0 0 3px 1px #4d90fe;
+            }
+
+            & + & {
+                margin-left: $sagovau-spacing-unit-base;
+            }
+
+        }
+
+        /*button*/.#{$sagovau-namespace}slider__control--fill {
+            fill: $sagovau-color-brand;
+        }
+
+        /*button*/.#{$sagovau-namespace}slider__control--stroke {
+            stroke: $sagovau-color-brand;
+            //stroke-linecap: round;
+            stroke-width: $sagovau-slider-control-stroke-width;
+        }
+
+            /*svg*/.#{$sagovau-namespace}slider__icon {
+                margin-top: -$sagovau-slider-control-border-width;
+                margin-left: -$sagovau-slider-control-border-width;
+            }
+
+
+    /*ul*/.#{$sagovau-namespace}slider__stage {
+        @extend %#{$inuit-namespace}list-bare;
+        overflow: hidden;     // Hide anything outside the stage
+        position: relative;   // Make sure the stage's children don't take up any space
+    }
+
+        /**
+         * 1. Make sure the first item is postioned in front of the others so
+         *    so there's no flash of content on load.
+         *
+         * 2. Make sure only the first item is displayed until the slider has initialised.
+         **/
+
+        /*li*/.#{$sagovau-namespace}slider__cell {
+            transform: translateX(0);    // Fix a bug in Chrome that causes movement on window resize - see https://code.google.com/p/chromium/issues/detail?id=533277
+            width: 100%;
+            z-index: 1;      /* [1] */
+
+            &:first-child {
+                z-index: 2;      /* [1] */
+            }
+
+            /*ul*/.#{$sagovau-namespace}slider__stage--loading & + & {
+                display: none;   /* [2] */
+            }
+
+        }

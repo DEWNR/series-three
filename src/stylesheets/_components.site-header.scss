@@ -1,0 +1,85 @@
+/*------------------------------------*\
+    #SITE-HEADER
+\*------------------------------------*/
+
+/**
+ * Styling for the Alpha series site header.
+ **/
+
+
+/**
+ * Custom site-header content can be set by defining a mixin called
+ * sagovau-site-header-custom-content
+ **/
+
+$sagovau-site-header-logo-height: 100px !default;
+
+
+/*header*/.#{$sagovau-namespace}site-header {
+    position: relative;
+    z-index: 2;  // Make sure any dropdowns (etc) from the header are positioned in front of the main content
+
+
+    // Include custom content, or default to brand colour
+
+    @if mixin-exists(sagovau-site-header-custom-content) {
+
+        @include sagovau-site-header-custom-content;
+
+    } @else {
+
+        background-color: $sagovau-color-brand;
+
+    }
+
+}
+
+
+    /*div*/.#{$sagovau-namespace}site-header__banner {
+        position: relative; // Use relative positioning so children can be absolutely positioned.
+    }
+
+
+        /**
+         * Custom site-header__logo content can be set by defining a mixin
+         * called sagovau-site-header-logo-custom-content
+         **/
+
+        /*h1*/.#{$sagovau-namespace}site-header__logo {
+            height: $sagovau-site-header-logo-height;
+            margin-bottom: 0;
+
+            // Include custom content
+
+            @if mixin-exists(sagovau-site-header-logo-custom-content) {
+
+                @include sagovau-site-header-logo-custom-content;
+
+            }
+
+        }
+
+
+        /*div*/.#{$sagovau-namespace}site-header__quick-links {
+            bottom: $sagovau-spacing-unit-base--small;
+            position: relative;
+            right: $sagovau-spacing-unit-base--small;
+            text-align: right;
+
+            @include media-query(small-and-up) {
+                position: absolute;
+            }
+
+        }
+
+
+    /*div*/.#{$sagovau-namespace}site-header__navigation {
+        background: {
+            color: $sagovau-color-brand;
+            image: url(#{$sagovau-path-shared}regional-menu-background.png);
+            image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) $sagovau-spacing-unit-base * 0.65);
+            repeat: repeat-x;
+        }
+        position: relative;   // Use relative positioning so children can be absolutely positioned.
+        width: 100%;
+    }
