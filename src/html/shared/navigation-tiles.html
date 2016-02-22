@@ -1,0 +1,35 @@
+
+<article class="u-mt" role="article">
+
+    {% for item in imageGallery %}
+
+        <h1>{{ item.title }}</h1>
+
+        <ul class="layout  layout--small">
+            {% for tile in item.files %}
+
+                <li class="layout__item    u-1-of-3-large-and-up  u-1-of-4-huge">
+
+                    <a class="navigation-tile" href="{{ tile.href }}">
+                        <div class="u-hidden  u-display-block-large-and-up">
+                          <div class="navigation-tile__image    fixed-aspect-ratio  fixed-aspect-ratio--1x1" style="background-image: url({{ tile.image }})"></div>
+                        </div>
+
+                        <div class="navigation-tile__text">
+
+                          <h2 class="navigation-tile__title">{{ tile.title }}</h2>
+
+                          <p class="u-hidden u-display-block-large-and-up">{{ tile.text }}</p>
+
+                        </div><!-- /.navigation-tile__text -->
+                    </a><!-- /.navigation-tile -->
+
+                </li><!-- /.layout__item -->
+
+            {% endfor %}
+
+        </ul>
+
+    {% endfor %}
+
+</article>

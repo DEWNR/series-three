@@ -1,0 +1,18 @@
+
+<div class="image-gallery">
+
+    <h3>Image Gallery</h3>
+
+    {% for item in imageGallery %}
+      <figure class="image-gallery__item">
+
+        <img class="image_gallery__image" src="{{ item.image }}" />
+
+        <figcaption class="image_gallery__caption">{{ item.caption }}</figcaption>
+
+      </figure>
+    {% endfor %}
+
+  </ul>
+
+</div>

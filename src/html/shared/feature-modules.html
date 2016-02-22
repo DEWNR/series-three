@@ -1,0 +1,23 @@
+
+<ul class="layout  layout--small">
+    {% for item in featureModules %}
+
+        <li class="layout__item  u-1-of-3-large-and-up">
+
+            <a class="feature-module{{ item.class }}" href="{{ item.href }}">
+
+                <h2 class="feature-module__title">{{ item.title }}</h2>
+
+                {# Hide the image's parent element to prevent it from being downloaded #}
+                <div class="u-hidden  u-display-block-large-and-up">
+
+                    <div class="feature-module__image" style="background-image: url({{ item.image }})"></div>
+
+                </div>
+
+            </a><!-- /.feature-module -->
+
+        </li><!-- /.layout item -->
+
+    {% endfor %}
+</ul>

@@ -1,0 +1,18 @@
+
+{% for item in actionModules %}
+    <div class="action-module">
+
+      <h2 class="action-module__title">{{ item.title }}</h2>
+
+      <ul class="action-module__list">
+
+        {% for link in item.links %}
+          <li class="action-module__item">
+            <a class="action-module__link" href="{{ link.href }}" target="_self">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+
+      </ul>
+
+    </div>
+{% endfor %}

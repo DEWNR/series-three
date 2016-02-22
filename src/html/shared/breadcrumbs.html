@@ -1,0 +1,6 @@
+
+{% for item in breadcrumbs %}
+    <nav class="breadcrumbs">
+        <p class="breadCrumb"><a class="breadCrumb" href="{{ item.href }}">{{ item.parent }}</a>&nbsp;&gt;&nbsp;<span class="breadCrumb-active">{{ item.active }}</span></p>
+    </nav>
+{% endfor %}

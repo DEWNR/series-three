@@ -1,0 +1,26 @@
+
+<ul class="layout  layout--small">
+
+    {% for item in teaserModules %}
+
+        <li class="layout__item">
+
+            <div class="teaser-module{{ item.class }}">
+
+                <a class="teaser-module__image" style="background-image: url({{ item.image }})" href="{{ item.href }}">
+                    <h2 class="teaser-module__title">{{ item.title }}</h2>
+                </a>
+
+                <div class="teaser-module__content">
+                    <p>{{ item.text }}</p>
+
+                    <a class="teaser-module__readmore" href="{{ item.href }}">Read more</a>
+                </div>
+
+            </div><!-- /.teaser-module -->
+
+        </li><!-- /.layout item -->
+
+    {% endfor %}
+
+</ul>

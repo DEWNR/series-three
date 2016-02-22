@@ -1,0 +1,54 @@
+{% from 'macros/helpers.html' import sprite %}
+
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- End Stylesheets -->
+
+    <title>{% block title %}Department of Environment, Water and Natural Resources (DEWNR){% endblock %}</title>
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+    <div class="wrapper  wrapper--large-and-up-ph-small    page-shadow">
+
+        {% include "shared/site-header.html" %}
+
+
+        <!-- Main content -->
+
+        <main class="box  box--small" role="main">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <!-- End main content -->
+
+
+    </div><!-- /.wrapper -->
+
+
+    {% block javascript %}
+
+        <!-- jQuery -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <!-- End jQuery -->
+
+    {% endblock %}
+
+</body>
+</html>
