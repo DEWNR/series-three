@@ -52,17 +52,17 @@
         {
             "title": "Lorem ipsum dolor",
             "class": "",
-            "image": "http://lorempixel.com/632/482/nature/4",
+            "image": "http://placehold.it/280x214",
             "href": "#"
         },{
             "title": "Consectetur",
             "class": "",
-            "image": "http://lorempixel.com/632/482/nature/5",
+            "image": "http://placehold.it/280x214",
             "href": "#"
         },{
             "title": "Eiusmod tempor",
             "class": "",
-            "image": "http://lorempixel.com/632/482/nature/6",
+            "image": "http://placehold.it/280x214",
             "href": "#"
         }
     ],
@@ -101,37 +101,37 @@
                     "title": "Lorem ipsum dolor sit",
                     "class": "",
                     "text": "Etiam eget faucibus nunc. Nam egestas congue tempus",
-                    "image": "http://lorempixel.com/632/482/nature/4",
+                    "image": "http://placehold.it/632x482",
                     "href": "#"
                 },{
                     "title": "Consectetur adipiscing",
                     "class": "",
                     "text": "Sed ac ornare diam. Quisque tincidunt eu dolor nec venenatis",
-                    "image": "http://lorempixel.com/632/482/nature/5",
+                    "image": "http://placehold.it/632x482",
                     "href": "#"
                 },{
                     "title": "Sed rutrum congue",
                     "class": "",
                     "text": "Vivamus pretium turpis ac scelerisque finibus",
-                    "image": "http://lorempixel.com/632/482/nature/6",
+                    "image": "http://placehold.it/632x482",
                     "href": "#"
                 },{
                     "title": "Mauris vestibulum erat",
                     "class": "",
                     "text": "Integer fringilla scelerisque tortor. Etiam sollicitudin congue felis",
-                    "image": "http://lorempixel.com/632/482/nature/1",
+                    "image": "http://placehold.it/632x482",
                     "href": "#"
                 },{
                     "title": "Ut dignissim ultrices nunc",
                     "class": "",
                     "text": "Class aptent taciti sociosqu ad litora torquent",
-                    "image": "http://lorempixel.com/632/482/nature/2",
+                    "image": "http://placehold.it/632x482",
                     "href": "#"
                 }
             ]
         }
     ],
-    "siteMap": [
+    "sitemap": [
         {
             "title": "Our places",
             "links": [
@@ -189,42 +189,21 @@
             "title": "What's happening",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "class": "",
-            "image": "http://lorempixel.com/160/160/nature/7",
+            "image": "http://placehold.it/160x160",
             "href": "#"
         },{
             "index": "1",
             "title": "Latest blog",
             "text": "Proin posuere turpis felis, vel dapibus sem vulputate non.",
             "class": "",
-            "image": "http://lorempixel.com/160/160/nature/8",
+            "image": "http://placehold.it/160x160",
             "href": "#"
         },{
             "index": "2",
             "title": "Fundraising",
             "text": "Etiam convallis ante eget augue ullamcorper.",
             "class": "",
-            "image": "http://lorempixel.com/160/160/nature/3",
-            "href": "#"
-        },{
-            "index": "3",
-            "title": "Dolore magna aliqua",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "class": "",
-            "image": "http://lorempixel.com/160/160/nature/7",
-            "href": "#"
-        },{
-            "index": "4",
-            "title": "Ut enim ad minim",
-            "text": "Proin posuere turpis felis, vel dapibus sem vulputate non.",
-            "class": "",
-            "image": "http://lorempixel.com/160/160/nature/8",
-            "href": "#"
-        },{
-            "index": "5",
-            "title": "Exercitation ullamco",
-            "text": "Etiam convallis ante eget augue ullamcorper.",
-            "class": "",
-            "image": "http://lorempixel.com/160/160/nature/3",
+            "image": "http://placehold.it/160x160",
             "href": "#"
         }
     ],
@@ -232,7 +211,7 @@
         {
             "title": "What's on",
             "class": "",
-            "image": "http://lorempixel.com/946/280/nature/1",
+            "image": "http://placehold.it/946x280",
             "imageAltText": "",
             "href": "#",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod urna vitae ipsum tristique rutrum."
@@ -242,13 +221,13 @@
         {
             "title": "Murdoch Avenue",
             "class": "",
-            "image": "http://lorempixel.com/632/210/nature/1",
+            "image": "http://placehold.it/632x210",
             "href": "#",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod urna vitae ipsum tristique rutrum."
         },{
             "title": "Sherwood Forest",
             "class": "",
-            "image": "http://lorempixel.com/632/210/nature/2",
+            "image": "http://placehold.it/632x210",
             "href": "#",
             "text": "Aliquam scelerisque suscipit ante, id auctor libero faucibus eu. Nam posuere vulputate tortor. Maecenas ut porta turpis. Vestibulum accumsan ultrices mauris, eget sollicitudin tortor imperdiet ut."
         }

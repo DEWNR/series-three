@@ -1,34 +1,32 @@
 
 <ul class="slider__stage   js-slider-stage">
+{% for item in spotlight %}
 
-    {% for item in spotlight %}
+    <li class="slider__cell">
 
-        <li class="slider__cell">
+        <a class="spotlight {{ item.class }}" href="{{ item.href }}">
 
-            <a class="spotlight {{ item.class }}" href="{{ item.href }}">
+        <div class="spotlight__background">
 
-            <div class="spotlight__background">
+            <img alt="{{ item.imageAltText }}" class="spotlight__image  spotlight__image--75%" src="{{ item.image }}" style="background-image: url({{ item.image }})">
 
-                <img alt="{{ item.imageAltText }}" class="spotlight__image  spotlight__image--75%" src="{{ item.image }}" style="background-image: url({{ item.image }})">
+        </div>
+
+        <div class="spotlight__text">
+
+            <div class="spotlight__header">
+
+                <h2 class="spotlight__title">{{ item.title }}</h2>
 
             </div>
 
-            <div class="spotlight__text">
+            <p>{{ item.description }}</p>
 
-                <div class="spotlight__header">
+        </div><!-- /.spotlight__text -->
 
-                    <h2 class="spotlight__title">{{ item.title }}</h2>
+        </a><!-- /.spotlight -->
 
-                </div>
+    <!-- /li.slider__cell -->
 
-                <p>{{ item.description }}</p>
-
-            </div><!-- /.spotlight__text -->
-
-            </a><!-- /.spotlight -->
-
-        <!-- /li.slider__cell -->
-
-    {% endfor %}
-
+{% endfor %}
 </ul>

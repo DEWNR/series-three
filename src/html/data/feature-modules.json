@@ -2,17 +2,17 @@
     {
         "title": "Lorem ipsum dolor",
         "class": "",
-        "image": "http://lorempixel.com/632/482/nature/4",
+        "image": "http://placehold.it/280x21",
         "href": "#"
     },{
         "title": "Consectetur",
         "class": "",
-        "image": "http://lorempixel.com/632/482/nature/5",
+        "image": "http://placehold.it/280x21",
         "href": "#"
     },{
         "title": "Eiusmod tempor",
         "class": "",
-        "image": "http://lorempixel.com/632/482/nature/6",
+        "image": "http://placehold.it/280x21",
         "href": "#"
     }
 ]
