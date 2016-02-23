@@ -19,11 +19,18 @@
     "js": {
       "src": "javascripts",
       "dest": "js",
-      "extractSharedJs": true,
-      "entries": {
-        "app": ["./app.js"],
-        "page": ["./page.js"]
-      },
+      "files": [
+          {
+            "source": ["src/javascripts/s3-prepare.js"],
+            "filename": "s3-prepare.js"
+          },{
+              "source": ["src/javascripts/modernizr.custom.45448.js", "src/javascripts/s3-enhance.js"],
+              "filename": "s3-enhance.js"
+          },{
+            "source": ["src/javascripts/s3-slider.js"],
+            "filename": "s3-slider.js"
+          }
+      ],
       "extensions": ["js"]
     },
 

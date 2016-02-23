@@ -29,9 +29,9 @@ var argv = require('yargs').argv,   // Pass agruments using the command line
     // Create the dest object
 
     paths.dest = {};
-    
+
     paths.dest.root = dest;
-    
+
     paths.dest.js = dest + "js/";
 
 
@@ -40,7 +40,7 @@ var argv = require('yargs').argv,   // Pass agruments using the command line
     paths.src = {};
 
     paths.src.js = src + "js/";
-    
+
 }());
 
 
