@@ -2,7 +2,7 @@ var config = require('../config')
 var compact = require('lodash/array/compact')
 
 // Grouped by what can run in parallel
-var assetTasks = ['fonts', 'iconFont', 'images', 'svgSprite']
+var assetTasks = ['fonts', 'images', 'svgSprite']
 var codeTasks = ['html', 'css']
 
 module.exports = function(env) {
@@ -12,10 +12,18 @@ module.exports = function(env) {
     production: 'webpack:production'
   }
 
+  var cssTasks = {
+    watch: 'css',
+    production: 'css:production'
+  }
+
   var matchFilter = function(task) {
     if(config.tasks[task]) {
       if(task === 'js') {
         task = jsTasks[env] || jsTask.watch
+      }
+      if(task === 'css') {
+        task = cssTasks[env] || cssTask.watch
       }
       return task
     }

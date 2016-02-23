@@ -17,7 +17,7 @@
     "development": "gulp"
   },
   "dependencies": {
-      "dewnr-bedrock": "0.2.4"
+    "dewnr-bedrock": "0.2.4"
   },
   "devDependencies": {
     "browser-sync": "^2.9.11",
@@ -27,6 +27,7 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-changed": "^1.2.1",
+    "gulp-cssnano": "^2.1.1",
     "gulp-data": "^1.2.0",
     "gulp-filesize": "0.0.6",
     "gulp-gh-pages": "^0.5.2",
@@ -34,10 +35,10 @@
     "gulp-iconfont": "^4.0.2",
     "gulp-if": "~1.2.5",
     "gulp-imagemin": "^2.3.0",
-    "gulp-cssnano": "^2.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-render": "^0.2.1",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-rev": "^5.1.0",
     "gulp-rev-napkin": "^0.1.0",
     "gulp-rev-replace": "^0.4.2",
