@@ -1,52 +1,59 @@
 {% extends 'layouts/master.html' %}
 
+
+
+
+
 {% block content %}
 
 
-<!-- Spotlight content -->
+    <!-- Spotlight content -->
 
-<div class="slider    js-slider">
+    <div class="slider    js-slider">
 
-    {% include "shared/spotlight.html" %}
+        {% include "shared/spotlight.html" %}
 
-</div>
+    </div>
 
-<!-- End spotlight content -->
-
-
-
-
-
-<div class="layout  layout--small">
-
-
-    <div class="layout__item  u-1-of-1  u-3-of-4-huge">
-
-        {% include "shared/feature-modules.html" %}
-
-        {% include "shared/small-modules.html" %}
-
-    </div><!-- /.layout__item -->
+    <!-- End spotlight content -->
 
 
 
 
 
-    <div class="layout__item  u-1-of-1  u-1-of-4-huge">
-
-        <hr class="u-hidden  u-display-block-large-and-up  u-hidden-huge    u-mb0">
-
-        {% include "shared/icon-modules.html" %}
-
-        {% include "shared/action-modules.html" %}
-
-    </div><!-- /.layout__item -->
+    <div class="layout  layout--small">
 
 
-</div>
+        <div class="layout__item  u-1-of-1  u-3-of-4-huge">
+
+            {% include "shared/feature-modules.html" %}
+
+            {% include "shared/small-modules.html" %}
+
+        </div><!-- /.layout__item -->
+
+
+
+
+
+        <div class="layout__item  u-1-of-1  u-1-of-4-huge">
+
+            <hr class="u-hidden  u-display-block-large-and-up  u-hidden-huge    u-mb0">
+
+            {% include "shared/icon-modules.html" %}
+
+            {% include "shared/action-modules.html" %}
+
+        </div><!-- /.layout__item -->
+
+
+    </div>
 
 
 {% endblock %}
+
+
+
 
 
 {% block javascript %}

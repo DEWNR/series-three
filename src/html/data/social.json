@@ -1,0 +1,18 @@
+[
+    {
+        "id": "S3-icon-facebook",
+        "title": "Facebook",
+        "classes": "social__icon  social__icon--round",
+        "url": "#"
+    },{
+        "id": "S3-icon-instagram",
+        "title": "Instagram",
+        "classes": "social__icon  social__icon--round",
+        "url": "#"
+    },{
+        "id": "S3-icon-twitter",
+        "title": "Twitter",
+        "classes": "social__icon  social__icon--round",
+        "url": "#"
+    }
+]

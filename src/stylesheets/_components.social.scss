@@ -34,6 +34,12 @@
 
                 color: inherit;
                 font-weight: bold;
+
+                .sprite {
+                    display: inline-block;
+                    height: 30px;
+                    width: 30px;
+                }
             }
 
                 /*img, svg*/.#{$sagovau-namespace}social__icon {
