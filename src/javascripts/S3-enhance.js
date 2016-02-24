@@ -6,8 +6,6 @@
  * Must be concatenated and minified before use in a production environment.
  **/
 
- var $ = require("jquery");
-
 /*global
 
     $, Modernizr, cookie

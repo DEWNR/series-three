@@ -37,6 +37,10 @@ $sagovau-site-header-logo-height: 100px !default;
 
     /*div*/.#{$sagovau-namespace}site-header__banner {
         position: relative; // Use relative positioning so children can be absolutely positioned.
+
+        a {
+            display: inline-block;
+        }
     }
 
 
