@@ -15,15 +15,52 @@
 
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>{% block title %}Department of Environment, Water and Natural Resources (DEWNR){% endblock %}</title>
+
+
+    <!-- Scripts -->
+
+    <!-- Avoid using unnecessary scripts in here; add them to the end of the body. If this can't be avoided, use inline or asynchronous scripts. -->
+
+    <script type="text/javascript">
+
+        /* Set site variables */
+
+        window.SITE_OPTIONS = {
+            brandColour: "#002855",
+            sharedFiles: "{{ share_path }}",
+            sitePrefix: "{{ site_prefix }}",
+            siteFiles: "http://www.environment.sa.gov.au/files/templates/00000000-0000-0000-0000-000000000000/1db5bad3-dbd8-4ea2-93e6-659348712e07/"
+        };
+
+    </script>
+
+    <script type="text/javascript" src="//fast.fonts.net/jsapi/e0cc203f-7221-4daf-a2d5-815483dba107.js" async></script>
+
+    <script src="js/S3-prepare.js" inline></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
     <!-- Stylesheets -->
 
     <link href="css/main.css" rel="stylesheet">
 
+    <noscript>
+
+      <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/e0cc203f-7221-4daf-a2d5-815483dba107.css">
+
+    </noscript>
+
     <!-- End Stylesheets -->
 
-    <title>{% block title %}Department of Environment, Water and Natural Resources (DEWNR){% endblock %}</title>
-
     {% block head %}{% endblock %}
+
 </head>
 <body>
 

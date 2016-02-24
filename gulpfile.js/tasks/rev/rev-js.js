@@ -2,7 +2,7 @@ var config = require('../../config')
 var gulp   = require('gulp')
 var path   = require('path')
 var rev    = require('gulp-rev')
-var revNapkin = require('gulp-rev-napkin');
+var revNapkin = require('gulp-rev-napkin')
 var uglify = require('gulp-uglify')
 
 // 4) Rev and compress JS files (this is done after assets, so that if a
