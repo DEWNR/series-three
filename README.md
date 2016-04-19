@@ -5,5 +5,5 @@ The Department of Environment, Water and Natural Resources' series three sites (
 Install using npm:
 
     $ npm install --save-dev dewnr-series-three
-    
+
 Common production-ready files are stored in the `dist` folder.

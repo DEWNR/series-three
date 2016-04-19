@@ -20,6 +20,23 @@ var paths = {
   dest: path.join(config.root.dest, config.tasks.html.dest),
 }
 
+
+var jsonTask = function(cb) {
+
+ var dataFiles = path.resolve(config.root.src, config.tasks.html.src, 'data/*.json')
+
+   gulp.src(dataFiles)
+    .pipe(jsoncombine("global.json",function(data){
+       var sData = JSON.stringify(data)
+       var sDataCC = sData.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })
+
+       return new Buffer(sDataCC)
+    }))
+    .pipe(gulp.dest("./src/html/data"));
+
+}
+
+
 var getData = function(file) {
   var dataPath = path.resolve(config.root.src, config.tasks.html.src, config.tasks.html.dataFile)
 
@@ -28,8 +45,12 @@ var getData = function(file) {
 
 
 
+
+
+
 var htmlTask = function(cb) {
     render.nunjucks.configure([path.join(config.root.src, config.tasks.html.src)], {watch: false })
+
 
     return gulp.src(paths.src)
       .pipe(data(getData))
@@ -41,5 +62,7 @@ var htmlTask = function(cb) {
       .pipe(browserSync.stream())
 }
 
-gulp.task('html', ['json'], htmlTask)
+gulp.task('json', jsonTask)
+gulp.task('html', gulpSequence(['json'], htmlTask))
+
 module.exports = htmlTask
