@@ -13,8 +13,12 @@ module.exports = function(env) {
     }
   }
 
+  function exists(value) {
+    return !!value
+  }
+
   return {
-    assetTasks: compact(assetTasks.map(matchFilter)),
-    codeTasks: compact(codeTasks.map(matchFilter))
+    assetTasks: compact(assetTasks.map(matchFilter).filter(exists)),
+    codeTasks: compact(codeTasks.map(matchFilter).filter(exists))
   }
 }
