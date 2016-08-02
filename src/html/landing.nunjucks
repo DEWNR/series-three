@@ -1,4 +1,4 @@
-{% extends 'layouts/master.html' %}
+{% extends 'layouts/master.nunjucks' %}
 
 
 
@@ -7,7 +7,7 @@
 {% block content %}
 
 
-    {% include "shared/navigation-tiles.html" %}
+    {% include "shared/navigation-tiles.nunjucks" %}
 
 
 {% endblock %}

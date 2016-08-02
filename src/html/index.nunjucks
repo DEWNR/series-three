@@ -1,4 +1,4 @@
-{% extends 'layouts/master.html' %}
+{% extends 'layouts/master.nunjucks' %}
 
 
 
@@ -11,7 +11,7 @@
 
     <div class="slider    js-slider">
 
-        {% include "shared/spotlight.html" %}
+        {% include "shared/spotlight.nunjucks" %}
 
     </div>
 
@@ -26,9 +26,9 @@
 
         <div class="layout__item  u-1-of-1  u-3-of-4-huge">
 
-            {% include "shared/feature-modules.html" %}
+            {% include "shared/feature-modules.nunjucks" %}
 
-            {% include "shared/small-modules.html" %}
+            {% include "shared/small-modules.nunjucks" %}
 
         </div><!-- /.layout__item -->
 
@@ -40,9 +40,9 @@
 
             <hr class="u-hidden  u-display-block-large-and-up  u-hidden-huge    u-mb0">
 
-            {% include "shared/icon-modules.html" %}
+            {% include "shared/icon-modules.nunjucks" %}
 
-            {% include "shared/action-modules.html" %}
+            {% include "shared/action-modules.nunjucks" %}
 
         </div><!-- /.layout__item -->
 

@@ -34,7 +34,6 @@ var getData = function(file) {
 
 
 
-
 var htmlTask = function(cb) {
 
     return gulp.src(config.tasks.html.templateFiles)
@@ -52,6 +51,6 @@ var htmlTask = function(cb) {
         .pipe(browserSync.stream())
 }
 
-gulp.task('html', gulpSequence(['htmlData'], htmlTask))
+gulp.task('html', htmlTask)
 
 module.exports = htmlTask

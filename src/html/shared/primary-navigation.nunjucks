@@ -25,7 +25,7 @@
 
         </button>
 
-        {% include "shared/site-search.html" %}
+        {% include "shared/site-search.nunjucks" %}
 
     </div>
 

@@ -53,7 +53,7 @@
       "partialData": ["html", "json"],
       "dataFiles": ["./src/html/data/*.json", "!**/global.json"],
       "templatePaths": ["./src/html"],
-      "templateFiles": ["./src/html/**/*.html","!**/{layouts,shared,macros,data}/**"],
+      "templateFiles": ["./src/html/**/*.nunjucks","!**/{layouts,shared,macros,data}/**"],
       "htmlmin": {
         "collapseWhitespace": true
       },

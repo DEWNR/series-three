@@ -10,7 +10,7 @@
 
         <div class="site-header__quick-links  social">
 
-            {% include "shared/social.html" %}
+            {% include "shared/social.nunjucks" %}
 
         </div><!-- /.site-header__quick-links -->
 
@@ -35,7 +35,7 @@
 
         </button>
 
-        {% include "shared/primary-navigation.html" %}
+        {% include "shared/primary-navigation.nunjucks" %}
 
     </div>
 
