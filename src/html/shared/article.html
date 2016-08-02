@@ -3,6 +3,6 @@
 
     <h1>{{ item.title }}</h1>
 
-    {{ item.body }}
+    {{ item.body | safe }}
 
 {% endfor %}
