@@ -36,14 +36,18 @@ var getData = function(file) {
 
 
 var htmlTask = function(cb) {
-    render.nunjucks.configure(config.tasks.html.templatePaths, {watch: false })
 
     return gulp.src(config.tasks.html.templateFiles)
         .pipe(data(getData))
         .on('error', handleErrors)
-        .pipe(render())
+        .pipe(render({
+          path: config.tasks.html.templatePaths,
+          envOptions: {
+            watch: false
+          }
+        }))
         .on('error', handleErrors)
-        .pipe(gulpif(process.env.NODE_ENV == 'production', htmlmin(config.tasks.html.htmlmin)))
+        .pipe(gulpif(global.production, htmlmin(config.tasks.html.htmlmin)))
         .pipe(gulp.dest(paths.dest))
         .pipe(browserSync.stream())
 }
