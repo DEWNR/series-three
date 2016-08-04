@@ -1,0 +1,56 @@
+{% extends 'layouts/master.nunjucks' %}
+
+
+
+
+
+{% block content %}
+
+
+    <div class="layout     layout--rev">
+
+
+        <div class="layout__item  u-4-of-5-huge">
+
+            <div class="layout">
+
+
+                <div class="layout__item  u-2-of-3-large-and-up">
+
+                    {% include "shared/breadcrumbs.nunjucks" %}
+
+                    {% include "shared/teaser-modules.nunjucks" %}
+
+                </div><!-- /layout__item -->
+
+
+
+
+
+                <aside class="related-information    layout__item  u-1-of-3-large-and-up" role="complementary">
+
+                    {% include "shared/icon-modules-internal.nunjucks" %}
+
+                </aside><!-- /layout__item -->
+
+
+            </div>
+
+        </div><!-- /layout__item -->
+
+
+        {% include "shared/secondary-navigation.nunjucks" %}
+
+
+    </div>
+
+
+{% endblock %}
+
+
+
+
+
+{% block javascript %}
+    {{ super() }}
+{% endblock %}

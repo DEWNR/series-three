@@ -34,6 +34,20 @@ $sagovau-icon-module-icon-type: fees, find, info !default;
 
 }
 
+/*a*/.#{$sagovau-namespace}icon-module--internal {
+
+    border-bottom-width: 1px;
+
+    &.icon-module--index-0 {
+        border-top-width: 0;
+    }
+
+    @include media-query(large-and-up) {
+        padding-bottom: 22.5%;
+    }
+
+}
+
 /*a*/.#{$sagovau-namespace}icon-module--index-0 {
 
     @include media-query(huge) {

@@ -1,0 +1,18 @@
+
+<ul class="layout  layout--small">
+
+    {% for item in iconModules %}
+
+        <li class="layout__item">
+
+            <a class="icon-module  icon-module--internal  icon-module--index-{{ item.index }}{{ item.class }}" href="{{ item.href }}">
+
+                <h2 class="icon-module__title">{{ item.title }}</h2>
+
+            </a><!-- /.icon-module -->
+
+        </li><!-- /.layout__item -->
+
+    {% endfor %}
+
+</ul>
