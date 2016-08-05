@@ -19,7 +19,7 @@
 
                     {% include "shared/breadcrumbs.nunjucks" %}
 
-                    <article role="article">
+                    <article class="article" role="article">
 
                         <!-- normalTemplateStart -->
                         {% include "shared/article.nunjucks" %}
